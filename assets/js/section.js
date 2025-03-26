@@ -45,7 +45,12 @@ var animateHeaders = function(headers) {
 //All ids of titles should be written here to animation work
 var animatedHeaders = animateHeaders({
     "#hello_header": '90%',
-    "#resume_header": '70%',
+    "#resume_header": '60%',
+    "#experience_header": '70%',
+    "#education_header": '70%',
+    "#skill_header": '70%',
+    "#summary_project_header": '70%',
+    "#traning_header": '70%',
     "#portfolio_header": '70%',
     "#testimonials_header": '70%',
     "#blog_header": '70%',
