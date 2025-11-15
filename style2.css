@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    /* no page scroll; map+sidebar manage height themselves */
+}
+
+header {
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* content area under header */
+.main-row {
+    height: calc(100vh - 70px);
+}
+
+#sidebarCol,
+#mapCol {
+    height: 100%;
+    padding: 0;
+}
+
+/* map full size inside its column */
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Sidebar content scroll if long */
+#sidebarCol {
+    overflow-y: auto;
+}
+
+/* ========= DESKTOP / LARGE SCREENS ========= */
+@media (min-width: 768px) {
+
+    /* When sidebar-hidden → hide sidebar completely and let map take full width */
+    .sidebar-hidden #sidebarCol {
+        display: none;
+    }
+
+    .sidebar-hidden #mapCol {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* ========= MOBILE / TABLET ========= */
+@media (max-width: 767.98px) {
+    .main-row {
+        position: relative;
+    }
+
+    /* Sidebar becomes slide-in panel */
+    #sidebarCol {
+        position: absolute;
+        top: 0;
+        /* already under header because .main-row starts below header */
+        left: 0;
+        width: 80%;
+        max-width: 320px;
+        height: 100%;
+        z-index: 1000;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+        background-color: #f8f9fa;
+        transform: translateX(0);
+        /* visible by default */
+        transition: transform 0.25s ease-out;
+        display: block;
+        /* IMPORTANT: always display block on mobile */
+    }
+
+    /* Map always full width on mobile */
+    #mapCol {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* When sidebar-hidden on mobile → slide it out, but KEEP display:block */
+    .sidebar-hidden #sidebarCol {
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    /* remove scrollbars */
+}
+
+/* Header height */
+header {
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+#sidebarCol,
+#mapCol {
+    height: calc(100vh - 60px);
+    padding: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== TOGGLE SYSTEM ===== */
+
+/* Hide sidebar */
+.sidebar-hidden #sidebarCol {
+    display: none;
+}
+
+/* Map expands to full width */
+.sidebar-hidden #mapCol {
+    width: 100% !important;
+}
