@@ -95,24 +95,24 @@
           <img class="" src="assets/img/my-pic.jpg" alt="avatar" id="avatar">
         </div>
         <div class="col-md-8">
-          <p class="personal-profile__name">Heng Sok</p>
-          <p class="personal-profile__work">Backend Developer Supervisor</p>
+          <p class="personal-profile__name" id="userName"></p>
+          <p class="personal-profile__work"><span id="userPosition"></span></p>
           <div class="personal-profile__contacts">
             <dl class="contact-list contact-list__opacity-titles">
               <dt>Age:</dt>
-              <dd>24</dd>
+              <dd><span id="userAge"></span></dd>
               <dt>Phone:</dt>
-              <dd><a href="tel:85586202240">086 202 240</a></dd>
+              <dd><a href="tel:85586202240"><span id="userPhone"></span></a></dd>
               <dt>Email:</dt>
-              <dd><a href="mailto:mail@mail.com">hengsok2202@gmail.com</a></dd>
+              <dd><a href="mailto:mail@mail.com"><span id="userEmail"></span></a></dd>
               <dt>Address:</dt>
-              <dd>Phnom Penh, Cambodia</dd>
+              <dd><span id="userAddress"></span></dd>
             </dl>
           </div>
           <p class="personal-profile__social">
-            <a href="https://github.com/HS9927" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/heng-sok" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-            <a href="https://t.me/sok_hs" target="_blank"><i class="fa fa-telegram"></i></a>
+            <a class="github" target="_blank"><i class="fa fa-github"></i></a>
+            <a class="linkedin" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            <a class="telegram" target="_blank"><i class="fa fa-telegram"></i></a>
           </p>
         </div>
       </div>
@@ -1032,18 +1032,18 @@
           <div class="contacts__list">
             <dl class="contact-list">
               <dt>Phone:</dt>
-              <dd><a href="tel:85586202240">086 202 240</a></dd>
+              <dd><a class="phone" ></a></dd>
               <dt>Email:</dt>
-              <dd><a href="mailto:hengsok2202@gmail.com">hengsok2202@gmail.com</a></dd>
+              <dd><a class="email">hengsok2202@gmail.com</a></dd>
               <dt>Telegram:</dt>
-              <dd><a href="https://t.me/sok_hs">sok_hs</a></dd>
+              <dd><a class="telegram"><span id="telegramUsername"></span></a></dd>
               
             </dl>
           </div>
           <div class="contacts__social">
             <ul>
-              <li><a href="https://www.linkedin.com/in/heng-sok/">Linkedin</a></li>
-              <li><a href="https://github.com/HS9927">GitHub</a></li>
+              <li><a class="linkedin">LinkedIn</a></li>
+              <li><a class="github">GitHub</a></li>
             </ul>
           </div>
         </div>
@@ -1104,7 +1104,10 @@
   <!-- Portfolio Modal -->
 
   <script src="assets/js/jquery-2.2.4.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
+  <script src="index.js"></script>
+  <script src="carrer-info.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--  <script src="assets/js/popper.min.js"></script>-->
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/menu.js"></script>
   <script src="assets/js/jquery.waypoints.js"></script>
@@ -1113,7 +1116,7 @@
   <script src="assets/js/portfolio-filter.js"></script>
   <script src="assets/js/slider-carousel.js"></script>
   <script src="assets/js/mobile-menu.js"></script>
-  <script src="assets/js/contacts.js"></script>
+<!--  <script src="assets/js/contacts.js"></script>-->
   <script src="assets/js/mbclicker.min.js"></script>
   <script src="assets/js/site-btn.js"></script>
   <script src="assets/js/style-switcher.js"></script>
